@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Tools Hub: Discover, Rank & Master AI Tools. Your ultimate ranked guide to the best AI tools.">
+    <title>AI Tools Hub - Ranked Directory of AI Tools</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Inter"', 'sans-serif'], arabic: ['"Noto Sans Arabic"', 'sans-serif'], },
+                    colors: { 'primary': '#4F46E5', 'secondary': '#D97706', /* A rich gold color */ 'light-bg': '#F3F4F6', 'dark-bg': '#030712', 'light-card': '#FFFFFF', 'dark-card': '#111827', 'light-text': '#111827', 'dark-text': '#F9FAFB', }
+                }
+            }
+        }
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+<body class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text transition-colors duration-300">
+
+    <!-- Header will be rendered here -->
+    <header id="main-header" class="sticky top-0 z-50 w-full bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-lg shadow-sm"></header>
+
+    <!-- App Container where pages will be injected -->
+    <main id="app" class="w-full"></main>
+    
+    <!-- Footer will be rendered here -->
+    <footer id="main-footer" class="py-8 text-center text-gray-500 dark:text-gray-400"></footer>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
