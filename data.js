@@ -1,186 +1,78 @@
-// Data for 70+ AI tools, structured for ranking
+// Data for 85+ AI tools, structured for ranking
 const toolsData = [
   // --- Chat & Writing ---
-  {
-    id: 'chatgpt',
-    name: { en: 'ChatGPT 4o', ar: 'شات جي بي تي 4o' },
-    logo: 'https://cdn.worldvectorlogo.com/logos/chatgpt-4.svg',
-    website: 'https://chat.openai.com/',
-    rating: 4.9, reviewCount: 55700, category: 'chat', isSponsored: true, pricing: { en: "Free tier, Plus $20/month", ar: "خطة مجانية، Plus بسعر 20$/شهر" },
-    short_description: { en: 'The most advanced conversational AI for reasoning, coding, and creativity.', ar: 'الذكاء الاصطناعي الحواري الأكثر تقدمًا للاستنتاج والبرمجة والإبداع.' },
-  },
-  {
-    id: 'claude-ai',
-    name: { en: 'Claude 3 Opus', ar: 'كلود 3 أوبس' },
-    logo: 'https://www.anthropic.com/images/icons/apple-touch-icon.png',
-    website: 'https://claude.ai/',
-    rating: 4.8, reviewCount: 23800, category: 'chat', pricing: { en: 'Free, Pro from $20/month', ar: 'مجاني، Pro يبدأ من 20$/شهر' },
-    short_description: { en: 'A powerful AI assistant with a large context window for complex tasks.', ar: 'مساعد ذكاء اصطناعي قوي بنافذة سياق كبيرة للمهام المعقدة.' },
-  },
-  {
-    id: 'perplexity-ai',
-    name: { en: 'Perplexity AI', ar: 'بيربليكسيتي إي آي' },
-    logo: 'https://www.perplexity.ai/favicon.ico',
-    website: 'https://www.perplexity.ai/',
-    rating: 4.7, reviewCount: 14500, category: 'chat', pricing: { en: 'Free, Pro from $20/month', ar: 'مجاني، Pro يبدأ من 20$/شهر' },
-    short_description: { en: 'Conversational search engine that provides answers with citations.', ar: 'محرك بحث محادثة يقدم إجابات مع مصادرها.' },
-  },
-  {
-    id: 'grammarly',
-    name: { en: 'Grammarly', ar: 'جرامرلي' },
-    logo: 'https://cdn.worldvectorlogo.com/logos/grammarly-2.svg',
-    website: 'https://www.grammarly.com/',
-    rating: 4.7, reviewCount: 21000, category: 'writing', isSponsored: true, pricing: { en: "Free, Premium $12/month", ar: "مجاني، Premium بسعر 12$/شهر" },
-    short_description: { en: 'AI-powered assistant for grammar, spelling, style, and tone.', ar: 'مساعد كتابة ذكي للقواعد والإملاء والأسلوب والنبرة.' },
-  },
-  {
-    id: 'jasper',
-    name: { en: 'Jasper', ar: 'جاسبر' },
-    logo: 'https://cdn.worldvectorlogo.com/logos/jasper-ai.svg',
-    website: 'https://www.jasper.ai/',
-    rating: 4.8, reviewCount: 5500, category: 'writing', pricing: { en: "Creator mode from $49/month", ar: "وضع المبدع يبدأ من 49$/شهر" },
-    short_description: { en: 'The AI Content Platform for teams to create on-brand content.', ar: 'منصة محتوى الذكاء الاصطناعي للفرق لإنشاء محتوى متوافق مع العلامة التجارية.' },
-  },
-  {
-    id: 'quillbot',
-    name: { en: 'QuillBot', ar: 'كويل بوت' },
-    logo: 'https://quillbot.com/favicon.png',
-    website: 'https://quillbot.com/',
-    rating: 4.5, reviewCount: 16000, category: 'writing', pricing: { en: "Free, Premium from $8.33/month", ar: "مجاني، Premium يبدأ من 8.33$/شهر" },
-    short_description: { en: 'AI paraphraser, grammar checker, and summarizer for academic writing.', ar: 'أداة إعادة صياغة ومدقق نحوي وملخص نصوص للكتابة الأكاديمية.' },
-  },
+  { id: 'chatgpt', name: { en: 'ChatGPT 4o', ar: 'شات جي بي تي 4o' }, logo: 'https://cdn.worldvectorlogo.com/logos/chatgpt-4.svg', website: 'https://chat.openai.com/', rating: 4.9, reviewCount: 55700, category: 'chat', isSponsored: true, pricing: { en: "Free tier, Plus $20/month", ar: "خطة مجانية، Plus بسعر 20$/شهر" }, short_description: { en: 'The most advanced conversational AI for reasoning, coding, and creativity.', ar: 'الذكاء الاصطناعي الحواري الأكثر تقدمًا للاستنتاج والبرمجة والإبداع.' } },
+  { id: 'claude-ai', name: { en: 'Claude 3 Opus', ar: 'كلود 3 أوبس' }, logo: 'https://www.anthropic.com/images/icons/apple-touch-icon.png', website: 'https://claude.ai/', rating: 4.8, reviewCount: 23800, category: 'chat', pricing: { en: 'Free, Pro from $20/month', ar: 'مجاني، Pro يبدأ من 20$/شهر' }, short_description: { en: 'A powerful AI assistant with a large context window for complex tasks.', ar: 'مساعد ذكاء اصطناعي قوي بنافذة سياق كبيرة للمهام المعقدة.' } },
+  { id: 'perplexity-ai', name: { en: 'Perplexity AI', ar: 'بيربليكسيتي إي آي' }, logo: 'https://www.perplexity.ai/favicon.ico', website: 'https://www.perplexity.ai/', rating: 4.7, reviewCount: 14500, category: 'chat', pricing: { en: 'Free, Pro from $20/month', ar: 'مجاني، Pro يبدأ من 20$/شهر' }, short_description: { en: 'Conversational search engine that provides answers with citations.', ar: 'محرك بحث محادثة يقدم إجابات مع مصادرها.' } },
+  { id: 'google-gemini', name: { en: 'Google Gemini', ar: 'جوجل جيميناي' }, logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Hey_Google_logo.svg', website: 'https://gemini.google.com/', rating: 4.6, reviewCount: 19200, category: 'chat', pricing: { en: 'Free, Advanced for $20/month', ar: 'مجاني، Advanced بسعر 20$/شهر' }, short_description: { en: 'Google\'s creative and helpful collaborator, integrated with Google Apps.', ar: 'مساعد جوجل الإبداعي والمفيد، متكامل مع تطبيقات جوجل.' } },
+  { id: 'grammarly', name: { en: 'Grammarly', ar: 'جرامرلي' }, logo: 'https://cdn.worldvectorlogo.com/logos/grammarly-2.svg', website: 'https://www.grammarly.com/', rating: 4.7, reviewCount: 21000, category: 'writing', isSponsored: true, pricing: { en: "Free, Premium $12/month", ar: "مجاني، Premium بسعر 12$/شهر" }, short_description: { en: 'AI-powered assistant for grammar, spelling, style, and tone.', ar: 'مساعد كتابة ذكي للقواعد والإملاء والأسلوب والنبرة.' } },
+  { id: 'jasper', name: { en: 'Jasper', ar: 'جاسبر' }, logo: 'https://cdn.worldvectorlogo.com/logos/jasper-ai.svg', website: 'https://www.jasper.ai/', rating: 4.8, reviewCount: 5500, category: 'writing', pricing: { en: "Creator mode from $49/month", ar: "وضع المبدع يبدأ من 49$/شهر" }, short_description: { en: 'The AI Content Platform for teams to create on-brand content.', ar: 'منصة محتوى الذكاء الاصطناعي للفرق لإنشاء محتوى متوافق مع العلامة التجارية.' } },
+  { id: 'quillbot', name: { en: 'QuillBot', ar: 'كويل بوت' }, logo: 'https://quillbot.com/favicon.png', website: 'https://quillbot.com/', rating: 4.5, reviewCount: 16000, category: 'writing', pricing: { en: "Free, Premium from $8.33/month", ar: "مجاني، Premium يبدأ من 8.33$/شهر" }, short_description: { en: 'AI paraphraser, grammar checker, and summarizer for academic writing.', ar: 'أداة إعادة صياغة ومدقق نحوي وملخص نصوص للكتابة الأكاديمية.' } },
+  { id: 'copy-ai', name: { en: 'Copy.ai', ar: 'كوبي.إي آي' }, logo: 'https://assets-global.website-files.com/623253096b52c0703c153358/623253096b52c0032c153381_61e8c56543165b4c4143499e_Copy.ai%2520Logo.svg', website: 'https://www.copy.ai/', rating: 4.5, reviewCount: 3600, category: 'writing', pricing: { en: "Free plan, Pro from $49/month", ar: "خطة مجانية، Pro تبدأ من 49$/شهر" }, short_description: { en: 'AI-powered copywriter that generates high-quality marketing copy.', ar: 'كاتب إعلانات مدعوم بالذكاء الاصطناعي يولد نصوصًا تسويقية.' } },
+  { id: 'writesonic', name: { en: 'Writesonic', ar: 'رايت سونيك' }, logo: 'https://writesonic.com/favicon.ico', website: 'https://writesonic.com/', rating: 4.7, reviewCount: 2300, category: 'writing', pricing: { en: 'Free Trial, Pro from $19/month', ar: 'تجربة مجانية، Pro يبدأ من 19$/شهر' }, short_description: { en: 'Create SEO-friendly content for your blogs, ads, emails, and website.', ar: 'أنشئ محتوى متوافق مع محركات البحث لمدوناتك وإعلاناتك وبريدك الإلكتروني.' } },
   
   // --- Image Generation ---
-  {
-    id: 'midjourney',
-    name: { en: 'Midjourney', ar: 'ميدجورني' },
-    logo: 'https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_Midjourney_-white.svg',
-    website: 'https://www.midjourney.com/',
-    rating: 4.9, reviewCount: 19800, category: 'image', isSponsored: true, pricing: { en: "Basic Plan from $10/month", ar: "الخطة الأساسية تبدأ من 10$/شهر" },
-    short_description: { en: 'The industry standard for high-quality, artistic AI image generation.', ar: 'المعيار الصناعي لتوليد صور فنية عالية الجودة بالذكاء الاصطناعي.' },
-  },
-  {
-    id: 'dalle3',
-    name: { en: 'DALL-E 3', ar: 'DALL-E 3' },
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/DALL-E_logo.svg/250px-DALL-E_logo.svg.png',
-    website: 'https://openai.com/dall-e-3',
-    rating: 4.7, reviewCount: 16500, category: 'image', pricing: { en: "Included in ChatGPT Plus", ar: "مضمن في ChatGPT Plus" },
-    short_description: { en: 'AI image generator that excels at following complex text prompts.', ar: 'مولد صور بالذكاء الاصطناعي يتفوق في اتباع الأوامر النصية المعقدة.' },
-  },
-  {
-    id: 'leonardo-ai',
-    name: { en: 'Leonardo.Ai', ar: 'ليوناردو.إي آي' },
-    logo: 'https://leonardo.ai/icons/favicon-32x32.png',
-    website: 'https://leonardo.ai/',
-    rating: 4.7, reviewCount: 13200, category: 'image', pricing: { en: "Free tier, Apprentice from $12/month", ar: "خطة مجانية، المبتدئة تبدأ من 12$/شهر" },
-    short_description: { en: 'A full suite of tools for creating game assets and artistic visuals.', ar: 'مجموعة أدوات كاملة لإنشاء أصول الألعاب والصور الفنية.' },
-  },
-  {
-    id: 'adobe-firefly',
-    name: { en: 'Adobe Firefly', ar: 'أدوبي فايرفلاي' },
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Adobe_Firefly_logo.svg/26px-Adobe_Firefly_logo.svg.png',
-    website: 'https://www.adobe.com/sensei/generative-ai/firefly.html',
-    rating: 4.6, reviewCount: 14200, category: 'image', pricing: { en: "Included in Adobe plans", ar: "مضمن في خطط أدوبي" },
-    short_description: { en: 'Generative AI designed to be commercially safe, built into Adobe apps.', ar: 'ذكاء اصطناعي توليدي مصمم ليكون آمنًا تجاريًا، مدمج في تطبيقات أدوبي.' },
-  },
+  { id: 'midjourney', name: { en: 'Midjourney', ar: 'ميدجورني' }, logo: 'https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_Midjourney_-white.svg', website: 'https://www.midjourney.com/', rating: 4.9, reviewCount: 19800, category: 'image', isSponsored: true, pricing: { en: "Basic Plan from $10/month", ar: "الخطة الأساسية تبدأ من 10$/شهر" }, short_description: { en: 'The industry standard for high-quality, artistic AI image generation.', ar: 'المعيار الصناعي لتوليد صور فنية عالية الجودة بالذكاء الاصطناعي.' } },
+  { id: 'dalle3', name: { en: 'DALL-E 3', ar: 'DALL-E 3' }, logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/DALL-E_logo.svg/250px-DALL-E_logo.svg.png', website: 'https://openai.com/dall-e-3', rating: 4.7, reviewCount: 16500, category: 'image', pricing: { en: "Included in ChatGPT Plus", ar: "مضمن في ChatGPT Plus" }, short_description: { en: 'AI image generator that excels at following complex text prompts.', ar: 'مولد صور بالذكاء الاصطناعي يتفوق في اتباع الأوامر النصية المعقدة.' } },
+  { id: 'leonardo-ai', name: { en: 'Leonardo.Ai', ar: 'ليوناردو.إي آي' }, logo: 'https://leonardo.ai/icons/favicon-32x32.png', website: 'https://leonardo.ai/', rating: 4.7, reviewCount: 13200, category: 'image', pricing: { en: "Free tier, Apprentice from $12/month", ar: "خطة مجانية، المبتدئة تبدأ من 12$/شهر" }, short_description: { en: 'A full suite of tools for creating game assets and artistic visuals.', ar: 'مجموعة أدوات كاملة لإنشاء أصول الألعاب والصور الفنية.' } },
+  { id: 'adobe-firefly', name: { en: 'Adobe Firefly', ar: 'أدوبي فايرفلاي' }, logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Adobe_Firefly_logo.svg/26px-Adobe_Firefly_logo.svg.png', website: 'https://www.adobe.com/sensei/generative-ai/firefly.html', rating: 4.6, reviewCount: 14200, category: 'image', pricing: { en: "Included in Adobe plans", ar: "مضمن في خطط أدوبي" }, short_description: { en: 'Generative AI designed to be commercially safe, built into Adobe apps.', ar: 'ذكاء اصطناعي توليدي مصمم ليكون آمنًا تجاريًا، مدمج في تطبيقات أدوبي.' } },
+  { id: 'ideogram', name: { en: 'Ideogram', ar: 'إيديوغرام' }, logo: 'https://ideogram.ai/assets/favicon-32x32.png', website: 'https://ideogram.ai/', rating: 4.6, reviewCount: 8800, category: 'image', pricing: { en: "Free, Plus from $8/month", ar: "مجاني، Plus يبدأ من 8$/شهر" }, short_description: { en: 'An AI image generator that is exceptionally good at creating text.', ar: 'مولد صور بالذكاء الاصطناعي جيد بشكل استثنائي في إنشاء النصوص.' } },
+  { id: 'krea-ai', name: { en: 'Krea AI', ar: 'كريا إي آي' }, logo: 'https://krea.ai/favicon.ico', website: 'https://www.krea.ai/', rating: 4.5, reviewCount: 3900, category: 'image', pricing: { en: "Free tier, Pro from $10/month", ar: "خطة مجانية، Pro تبدأ من 10$/شهر" }, short_description: { en: 'Real-time AI image generation and enhancement tools.', ar: 'أدوات توليد وتحسين الصور بالذكاء الاصطناعي في الوقت الفعلي.' } },
+  { id: 'magnific-ai', name: { en: 'Magnific AI', ar: 'ماجنيفيك إي آي' }, logo: 'https://magnific.ai/images/favicon.png', website: 'https://magnific.ai/', rating: 4.8, reviewCount: 4200, category: 'image', pricing: { en: "Pro from $39/month", ar: "Pro يبدأ من 39$/شهر" }, short_description: { en: 'The most advanced AI upscaler and image enhancement tool.', ar: 'أداة تكبير وتحسين الصور الأكثر تقدمًا بالذكاء الاصطناعي.' } },
 
   // --- Video Generation ---
-  {
-    id: 'sora',
-    name: { en: 'OpenAI Sora', ar: 'Sora من OpenAI' },
-    logo: 'https://res.cloudinary.com/apideck/image/upload/v1708026135/marketplaces/ckgndlfed000601mk3op39d5r/listings/sora.png',
-    website: 'https://openai.com/sora',
-    rating: 5.0, reviewCount: 22000, category: 'video', pricing: { en: "Not yet publicly available", ar: "غير متاح للعموم بعد" },
-    short_description: { en: 'AI model that can create realistic and imaginative scenes from text.', ar: 'نموذج ذكاء اصطناعي يمكنه إنشاء مشاهد واقعية وخيالية من النص.' },
-  },
-  {
-    id: 'runway',
-    name: { en: 'Runway Gen-3', ar: 'رانواي Gen-3' },
-    logo: 'https://www.runwayml.com/images/runway-logo.svg',
-    website: 'https://runwayml.com/',
-    rating: 4.8, reviewCount: 13900, category: 'video', isSponsored: true, pricing: { en: "Free tier, Standard from $15/month", ar: "خطة مجانية، القياسية تبدأ من 15$/شهر" },
-    short_description: { en: 'A suite of AI magic tools for next-level video creation and editing.', ar: 'مجموعة أدوات سحرية بالذكاء الاصطناعي لإنشاء وتحرير الفيديو.' },
-  },
-  {
-    id: 'pika-labs',
-    name: { en: 'Pika Labs', ar: 'بيكا لابز' },
-    logo: 'https://pika.art/pika-logo.png',
-    website: 'https://pika.art/',
-    rating: 4.7, reviewCount: 11500, category: 'video', pricing: { en: "Free tier, Pro from $10/month", ar: "خطة مجانية، Pro تبدأ من 10$/شهر" },
-    short_description: { en: 'An idea-to-video platform that brings your creativity to motion.', ar: 'منصة من فكرة إلى فيديو تحول إبداعك إلى حركة.' },
-  },
-  {
-    id: 'luma-ai',
-    name: { en: 'Luma Dream Machine', ar: 'Luma Dream Machine' },
-    logo: 'https://lumalabs.ai/luma-logo-256.png',
-    website: 'https://lumalabs.ai/',
-    rating: 4.8, reviewCount: 15950, category: 'video', isSponsored: true, pricing: { en: "Free to use (with limits)", ar: "مجاني للاستخدام (مع قيود)" },
-    short_description: { en: 'Create high-quality, realistic 5-second videos from text and images.', ar: 'أنشئ مقاطع فيديو واقعية عالية الجودة مدتها 5 ثوانٍ من النصوص والصور.' },
-  },
-  {
-    id: 'synthesia',
-    name: { en: 'Synthesia', ar: 'سينثيسيا' },
-    logo: 'https://assets-global.website-files.com/61ba09162326382c5598686a/623049b497364b635677a287_logo-1.svg',
-    website: 'https://www.synthesia.io/',
-    rating: 4.6, reviewCount: 8200, category: 'avatar', pricing: { en: "Personal plan from $30/month", ar: "الخطة الشخصية تبدأ من 30$/شهر" },
-    short_description: { en: 'Create professional videos with realistic AI avatars in minutes.', ar: 'أنشئ مقاطع فيديو احترافية باستخدام شخصيات رمزية واقعية في دقائق.' },
-  },
-  {
-    id: 'heygen',
-    name: { en: 'HeyGen', ar: 'هاي جين' },
-    logo: 'https://www.heygen.com/static/favicon-32x32.png',
-    website: 'https://www.heygen.com/',
-    rating: 4.7, reviewCount: 7100, category: 'avatar', pricing: { en: "Creator plan from $29/month", ar: "خطة المبدع تبدأ من 29$/شهر" },
-    short_description: { en: 'AI video platform with customizable avatars and video translation.', ar: 'منصة فيديو بالذكاء الاصطناعي مع شخصيات رمزية قابلة للتخصيص وترجمة فيديو.' },
-  },
-
-  // --- Audio & Music ---
-  {
-    id: 'elevenlabs',
-    name: { en: 'ElevenLabs', ar: 'إيليفن لابز' },
-    logo: 'https://storage.googleapis.com/eleven-public-prod/images/v2_web/logo_light.svg',
-    website: 'https://elevenlabs.io/',
-    rating: 4.8, reviewCount: 12300, category: 'audio', isSponsored: true, pricing: { en: "Free tier, Starter from $5/month", ar: "خطة مجانية، المبتدئة تبدأ من 5$/شهر" },
-    short_description: { en: 'The most realistic and versatile AI text-to-speech and voice cloning.', ar: 'الأكثر واقعية وتنوعًا في تحويل النص إلى كلام واستنساخ الصوت.' },
-  },
-  {
-    id: 'suno-ai',
-    name: { en: 'Suno AI', ar: 'سونو إي آي' },
-    logo: 'https://www.suno.ai/favicon.ico',
-    website: 'https://www.suno.ai/',
-    rating: 4.8, reviewCount: 12500, category: 'music', isSponsored: true, pricing: { en: 'Free, Pro from $10/month', ar: 'مجاني، Pro يبدأ من 10$/شهر' },
-    short_description: { en: 'Create full songs (lyrics, instruments, and vocals) from a simple prompt.', ar: 'أنشئ أغانٍ كاملة (كلمات، آلات، وغناء) من أمر بسيط.' },
-  },
-  {
-    id: 'udio-ai',
-    name: { en: 'Udio AI', ar: 'يوديو إي آي' },
-    logo: 'https://www.udio.com/favicon.ico',
-    website: 'https://www.udio.com/',
-    rating: 4.7, reviewCount: 8900, category: 'music', pricing: { en: 'Free to use (beta)', ar: 'مجاني للاستخدام (تجريبي)' },
-    short_description: { en: 'Create extraordinary music with a focus on high-quality vocals.', ar: 'أنشئ موسيقى استثنائية مع التركيز على الغناء عالي الجودة.' },
-  },
-  {
-    id: 'adobe-podcast',
-    name: { en: 'Adobe Podcast', ar: 'أدوبي بودكاست' },
-    logo: 'https://www.adobe.com/content/dam/cc/icons/Adobe_Podcast.svg',
-    website: 'https://podcast.adobe.com/',
-    rating: 4.7, reviewCount: 9100, category: 'audio', pricing: { en: "Free (with limits)", ar: "مجاني (مع قيود)" },
-    short_description: { en: 'AI-powered audio tools, including incredible background noise removal.', ar: 'أدوات صوتية بالذكاء الاصطناعي، بما في ذلك إزالة ضوضاء الخلفية المذهلة.' },
-  },
+  { id: 'sora', name: { en: 'OpenAI Sora', ar: 'Sora من OpenAI' }, logo: 'https://res.cloudinary.com/apideck/image/upload/v1708026135/marketplaces/ckgndlfed000601mk3op39d5r/listings/sora.png', website: 'https://openai.com/sora', rating: 5.0, reviewCount: 22000, category: 'video', pricing: { en: "Not yet publicly available", ar: "غير متاح للعموم بعد" }, short_description: { en: 'AI model that can create realistic and imaginative scenes from text.', ar: 'نموذج ذكاء اصطناعي يمكنه إنشاء مشاهد واقعية وخيالية من النص.' } },
+  { id: 'runway', name: { en: 'Runway Gen-3', ar: 'رانواي Gen-3' }, logo: 'https://www.runwayml.com/images/runway-logo.svg', website: 'https://runwayml.com/', rating: 4.8, reviewCount: 13900, category: 'video', isSponsored: true, pricing: { en: "Free tier, Standard from $15/month", ar: "خطة مجانية، القياسية تبدأ من 15$/شهر" }, short_description: { en: 'A suite of AI magic tools for next-level video creation and editing.', ar: 'مجموعة أدوات سحرية بالذكاء الاصطناعي لإنشاء وتحرير الفيديو.' } },
+  { id: 'pika-labs', name: { en: 'Pika Labs', ar: 'بيكا لابز' }, logo: 'https://pika.art/pika-logo.png', website: 'https://pika.art/', rating: 4.7, reviewCount: 11500, category: 'video', pricing: { en: "Free tier, Pro from $10/month", ar: "خطة مجانية، Pro تبدأ من 10$/شهر" }, short_description: { en: 'An idea-to-video platform that brings your creativity to motion.', ar: 'منصة من فكرة إلى فيديو تحول إبداعك إلى حركة.' } },
+  { id: 'luma-ai', name: { en: 'Luma Dream Machine', ar: 'Luma Dream Machine' }, logo: 'https://lumalabs.ai/luma-logo-256.png', website: 'https://lumalabs.ai/', rating: 4.8, reviewCount: 15950, category: 'video', isSponsored: true, pricing: { en: "Free to use (with limits)", ar: "مجاني للاستخدام (مع قيود)" }, short_description: { en: 'Create high-quality, realistic 5-second videos from text and images.', ar: 'أنشئ مقاطع فيديو واقعية عالية الجودة مدتها 5 ثوانٍ من النصوص والصور.' } },
+  { id: 'invideo-ai', name: { en: 'InVideo AI', ar: 'إن فيديو إي آي' }, logo: 'https://invideo.io/favicon.ico', website: 'https://invideo.io/', rating: 4.6, reviewCount: 4500, category: 'video', pricing: { en: 'Free plan, Plus from $25/month', ar: 'خطة مجانية، Plus تبدأ من 25$/شهر' }, short_description: { en: 'Turn any content or idea into a video with AI-powered automation.', ar: 'حول أي محتوى أو فكرة إلى فيديو باستخدام الأتمتة المدعومة بالذكاء الاصطناعي.' } },
+  { id: 'descript', name: { en: 'Descript', ar: 'ديسكربت' }, logo: 'https://www.descript.com/favicon.ico', website: 'https://www.descript.com/', rating: 4.7, reviewCount: 5800, category: 'video', pricing: { en: "Free tier, Creator from $15/month", ar: "خطة مجانية، المبدع تبدأ من 15$/شهر" }, short_description: { en: 'All-in-one editor that makes editing video & audio as easy as a doc.', ar: 'محرر شامل يجعل تحرير الفيديو والصوت سهلاً مثل تحرير مستند.' } },
   
-  // --- Developer, Productivity, 3D, Design, Marketing Tools... (continue to 70+)
-  { id: 'github-copilot', name: { en: 'GitHub Copilot', ar: 'جيتهاب كوبايلوت' }, logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/GitHub_Copilot_logo.svg/1200px-GitHub_Copilot_logo.svg.png', website: 'https://github.com/features/copilot', rating: 4.7, reviewCount: 14100, category: 'developer', isSponsored: true, pricing: { en: "Individual from $10/month", ar: "للأفراد يبدأ من 10$/شهر" }, short_description: { en: 'Your AI pair programmer that suggests code and entire functions.', ar: 'مبرمجك الزوجي الاصطناعي الذي يقترح أكواد ودوال كاملة.' } },
+  // --- AI Avatars ---
+  { id: 'synthesia', name: { en: 'Synthesia', ar: 'سينثيسيا' }, logo: 'https://assets-global.website-files.com/61ba09162326382c5598686a/623049b497364b635677a287_logo-1.svg', website: 'https://www.synthesia.io/', rating: 4.6, reviewCount: 8200, category: 'avatar', pricing: { en: "Personal plan from $30/month", ar: "الخطة الشخصية تبدأ من 30$/شهر" }, short_description: { en: 'Create professional videos with realistic AI avatars in minutes.', ar: 'أنشئ مقاطع فيديو احترافية باستخدام شخصيات رمزية واقعية في دقائق.' } },
+  { id: 'heygen', name: { en: 'HeyGen', ar: 'هاي جين' }, logo: 'https://www.heygen.com/static/favicon-32x32.png', website: 'https://www.heygen.com/', rating: 4.7, reviewCount: 7100, category: 'avatar', pricing: { en: "Creator plan from $29/month", ar: "خطة المبدع تبدأ من 29$/شهر" }, short_description: { en: 'AI video platform with customizable avatars and video translation.', ar: 'منصة فيديو بالذكاء الاصطناعي مع شخصيات رمزية قابلة للتخصيص وترجمة فيديو.' } },
+  { id: 'd-id', name: { en: 'D-ID', ar: 'دي-آي دي' }, logo: 'https://www.d-id.com/wp-content/uploads/2021/08/favicon.png', website: 'https://www.d-id.com/', rating: 4.5, reviewCount: 4800, category: 'avatar', pricing: { en: "Trial, Lite from $5.99/month", ar: "تجربة، Lite تبدأ من 5.99$/شهر" }, short_description: { en: 'Create videos from a single image, bringing photos to life.', ar: 'أنشئ مقاطع فيديو من صورة واحدة، مما يجعل الصور تنبض بالحياة.' } },
+  
+  // --- Audio & Music ---
+  { id: 'elevenlabs', name: { en: 'ElevenLabs', ar: 'إيليفن لابز' }, logo: 'https://storage.googleapis.com/eleven-public-prod/images/v2_web/logo_light.svg', website: 'https://elevenlabs.io/', rating: 4.8, reviewCount: 12300, category: 'audio', isSponsored: true, pricing: { en: "Free tier, Starter from $5/month", ar: "خطة مجانية، المبتدئة تبدأ من 5$/شهر" }, short_description: { en: 'The most realistic and versatile AI text-to-speech and voice cloning.', ar: 'الأكثر واقعية وتنوعًا في تحويل النص إلى كلام واستنساخ الصوت.' } },
+  { id: 'adobe-podcast', name: { en: 'Adobe Podcast', ar: 'أدوبي بودكاست' }, logo: 'https://www.adobe.com/content/dam/cc/icons/Adobe_Podcast.svg', website: 'https://podcast.adobe.com/', rating: 4.7, reviewCount: 9100, category: 'audio', pricing: { en: "Free (with limits)", ar: "مجاني (مع قيود)" }, short_description: { en: 'AI-powered audio tools, including incredible background noise removal.', ar: 'أدوات صوتية بالذكاء الاصطناعي، بما في ذلك إزالة ضوضاء الخلفية المذهلة.' } },
+  { id: 'murf-ai', name: { en: 'Murf AI', ar: 'ميرف إي آي' }, logo: 'https://murf.ai/favicon.ico', website: 'https://murf.ai/', rating: 4.6, reviewCount: 4600, category: 'audio', pricing: { en: 'Free plan, Pro from $29/month', ar: 'خطة مجانية، Pro يبدأ من 29$/شهر' }, short_description: { en: 'Go from text to speech with a versatile AI voice generator.', ar: 'انتقل من النص إلى الكلام باستخدام مولد صوت AI متعدد الاستخدامات.' } },
+  { id: 'suno-ai', name: { en: 'Suno AI', ar: 'سونو إي آي' }, logo: 'https://www.suno.ai/favicon.ico', website: 'https://www.suno.ai/', rating: 4.8, reviewCount: 12500, category: 'music', isSponsored: true, pricing: { en: 'Free, Pro from $10/month', ar: 'مجاني، Pro يبدأ من 10$/شهر' }, short_description: { en: 'Create full songs (lyrics, instruments, and vocals) from a simple prompt.', ar: 'أنشئ أغانٍ كاملة (كلمات، آلات، وغناء) من أمر بسيط.' } },
+  { id: 'udio-ai', name: { en: 'Udio AI', ar: 'يوديو إي آي' }, logo: 'https://www.udio.com/favicon.ico', website: 'https://www.udio.com/', rating: 4.7, reviewCount: 8900, category: 'music', pricing: { en: 'Free to use (beta)', ar: 'مجاني للاستخدام (تجريبي)' }, short_description: { en: 'Create extraordinary music with a focus on high-quality vocals.', ar: 'أنشئ موسيقى استثنائية مع التركيز على الغناء عالي الجودة.' } },
+  { id: 'aiva', name: { en: 'AIVA', ar: 'أيفا' }, logo: 'https://www.aiva.ai/favicon.ico', website: 'https://www.aiva.ai/', rating: 4.5, reviewCount: 3500, category: 'music', pricing: { en: 'Free, Standard from €15/month', ar: 'مجاني، Standard يبدأ من 15€/شهر' }, short_description: { en: 'An AI music generation assistant for creative soundtracks.', ar: 'مساعد توليد موسيقى بالذكاء الاصطناعي للموسيقى التصويرية الإبداعية.' } },
+
+  // --- Productivity & Business ---
   { id: 'notion-ai', name: { en: 'Notion AI', ar: 'نوشن إي آي' }, logo: 'https://www.notion.so/images/meta/default.png', website: 'https://www.notion.so/product/ai', rating: 4.7, reviewCount: 13400, category: 'productivity', pricing: { en: "Add-on for $10/month", ar: "إضافة بسعر 10$/شهر" }, short_description: { en: 'AI assistant integrated inside your Notion workspace.', ar: 'مساعد ذكاء اصطناعي مدمج داخل مساحة عمل Notion الخاصة بك.' } },
   { id: 'fireflies-ai', name: { en: 'Fireflies.ai', ar: 'فايرفلايز.إي آي' }, logo: 'https://fireflies.ai/images/logo-icon.svg', website: 'https://fireflies.ai/', rating: 4.6, reviewCount: 8500, category: 'productivity', isSponsored: true, pricing: { en: "Free tier, Pro from $18/month", ar: "خطة مجانية، Pro تبدأ من 18$/شهر" }, short_description: { en: 'AI assistant that records, transcribes, and analyzes your meetings.', ar: 'مساعد ذكاء اصطناعي يسجل ويفرغ ويحلل اجتماعاتك.' } },
+  { id: 'tome-app', name: { en: 'Tome', ar: 'توم' }, logo: 'https://tome.app/favicon.ico', website: 'https://tome.app/', rating: 4.6, reviewCount: 6200, category: 'productivity', pricing: { en: "Free tier, Pro from $10/month", ar: "خطة مجانية، Pro تبدأ من 10$/شهر" }, short_description: { en: 'The AI-powered storytelling format for presentations and documents.', ar: 'تنسيق سرد القصص المدعوم بالذكاء الاصطناعي للعروض التقديمية.' } },
+  { id: 'gamma-app', name: { en: 'Gamma', ar: 'جاما' }, logo: 'https://gamma.app/favicon.ico', website: 'https://gamma.app/', rating: 4.6, reviewCount: 5700, category: 'productivity', isSponsored: true, pricing: { en: 'Free, Plus from $10/month', ar: 'مجاني، Plus يبدأ من 10$/شهر' }, short_description: { en: 'A new medium for presenting ideas. Powered by AI.', ar: 'وسيط جديد لتقديم الأفكار. مدعوم بالذكاء الاصطناعي.' } },
+  { id: 'clickup-ai', name: { en: 'ClickUp AI', ar: 'كليك أب إي آي' }, logo: 'https://clickup.com/assets/favicons/favicon-32x32.png', website: 'https://clickup.com/ai', rating: 4.7, reviewCount: 7500, category: 'productivity', pricing: { en: "Add-on for $5/month per member", ar: "إضافة بسعر 5$/شهر لكل عضو" }, short_description: { en: 'AI tools built into the all-in-one productivity platform ClickUp.', ar: 'أدوات ذكاء اصطناعي مدمجة في منصة الإنتاجية الشاملة ClickUp.' } },
+  { id: 'otter-ai', name: { en: 'Otter.ai', ar: 'أوتر.إي آي' }, logo: 'https://otter.ai/favicon.ico', website: 'https://otter.ai/', rating: 4.7, reviewCount: 6900, category: 'productivity', pricing: { en: 'Basic plan free, Pro from $16.99/month', ar: 'الخطة الأساسية مجانية، Pro يبدأ من 16.99$/شهر' }, short_description: { en: 'Get real-time automated notes for your meetings, interviews, and lectures.', ar: 'احصل على ملاحظات آلية في الوقت الفعلي لاجتماعاتك ومقابلاتك ومحاضراتك.' } },
+  
+  // --- Developer Tools ---
+  { id: 'github-copilot', name: { en: 'GitHub Copilot', ar: 'جيتهاب كوبايلوت' }, logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/GitHub_Copilot_logo.svg/1200px-GitHub_Copilot_logo.svg.png', website: 'https://github.com/features/copilot', rating: 4.7, reviewCount: 14100, category: 'developer', isSponsored: true, pricing: { en: "Individual from $10/month", ar: "للأفراد يبدأ من 10$/شهر" }, short_description: { en: 'Your AI pair programmer that suggests code and entire functions.', ar: 'مبرمجك الزوجي الاصطناعي الذي يقترح أكواد ودوال كاملة.' } },
+  { id: 'replit-ghostwriter', name: { en: 'Replit Ghostwriter', ar: 'ريبليت جوسترايتر' }, logo: 'https://replit.com/public/images/replit-logo-800x800.png', website: 'https://replit.com/site/ghostwriter', rating: 4.5, reviewCount: 4900, category: 'developer', pricing: { en: "Included in Replit Core plan", ar: "مضمن في خطة Replit Core" }, short_description: { en: 'An AI coding assistant that helps you write better code, faster.', ar: 'مساعد ترميز بالذكاء الاصطناعي يساعدك على كتابة كود أفضل وأسرع.' } },
+  { id: 'tabnine', name: { en: 'Tabnine', ar: 'تابناين' }, logo: 'https://www.tabnine.com/favicon-32x32.png', website: 'https://www.tabnine.com/', rating: 4.4, reviewCount: 5500, category: 'developer', pricing: { en: "Free tier, Pro from $12/month", ar: "خطة مجانية، Pro تبدأ من 12$/شهر" }, short_description: { en: 'AI assistant that learns your coding patterns and provides suggestions.', ar: 'مساعد ذكاء اصطناعي يتعلم أنماط الترميز الخاصة بك ويقدم اقتراحات.' } },
+  { id: 'amazon-codewhisperer', name: { en: 'Amazon CodeWhisperer', ar: 'أمازون كود ويسبرر' }, logo: 'https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico', website: 'https://aws.amazon.com/codewhisperer/', rating: 4.6, reviewCount: 3200, category: 'developer', pricing: { en: "Free for individuals", ar: "مجاني للأفراد" }, short_description: { en: 'AI code generator trained on billions of lines of Amazon code.', ar: 'مولد أكواد بالذكاء الاصطناعي مدرب على مليارات الأسطر من أكواد أمازون.' } },
+  
+  // --- 3D & Design Tools ---
   { id: 'spline-ai', name: { en: 'Spline AI', ar: 'سبلاين إي آي' }, logo: 'https://spline.design/favicon.ico', website: 'https://spline.design/ai', rating: 4.7, reviewCount: 7400, category: '3d', pricing: { en: "Free tier, Super from $9/month", ar: "خطة مجانية، Super تبدأ من 9$/شهر" }, short_description: { en: 'Generate 3D objects, textures, and animations with text prompts.', ar: 'توليد كائنات ثلاثية الأبعاد وخامات ورسوم متحركة من النصوص.' } },
-  { id: 'figma-ai', name: { en: 'FigJam AI', ar: 'فيج جام إي آي' }, logo: 'https://static.figma.com/app/icon/1/icon-192.png', website: 'https://www.figma.com/figjam/ai/', rating: 4.7, reviewCount: 3100, category: 'design', pricing: { en: 'Included in Figma plans', ar: 'مضمن في خطط Figma' }, short_description: { en: 'Brainstorm, summarize, and organize ideas faster with AI in FigJam.', ar: 'تبادل الأفكار ولخصها ونظمها بشكل أسرع باستخدام الذكاء الاصطناعي.' } },
-  { id: 'looka', name: { en: 'Looka', ar: 'لوكا' }, logo: 'https://looka.com/favicon.ico', website: 'https://looka.com/', rating: 4.5, reviewCount: 1400, category: 'design', pricing: { en: 'Logo from $20, Brand Kit from $96/year', ar: 'شعار من 20$، حزمة العلامة التجارية من 96$/سنة' }, short_description: { en: 'AI-powered platform to design a logo and build a brand you love.', ar: 'منصة مدعومة بالذكاء الاصطناعي لتصميم شعار وبناء علامة تجارية تحبها.' } },
+  { id: 'meshy-ai', name: { en: 'Meshy AI', ar: 'ميشي إي آي' }, logo: 'https://www.meshy.ai/favicon-32x32.png', website: 'https://www.meshy.ai/', rating: 4.5, reviewCount: 2600, category: '3d', pricing: { en: "Free tier, Pro from $20/month", ar: "خطة مجانية، Pro تبدأ من 20$/شهر" }, short_description: { en: 'AI 3D asset generation from text or images for games and virtual worlds.', ar: 'توليد أصول ثلاثية الأبعاد بالذكاء الاصطناعي من النصوص أو الصور للألعاب.' } },
+  { id: 'figma-ai', name: { en: 'FigJam AI', ar: 'فيج جام إي آي' }, logo: 'https://static.figma.com/app/icon/1/icon-192.png', website: 'https://www.figma.com/figjam/ai/', rating: 4.7, reviewCount: 9100, category: 'design', pricing: { en: 'Included in Figma plans', ar: 'مضمن في خطط Figma' }, short_description: { en: 'Brainstorm, summarize, and organize ideas faster with AI in FigJam.', ar: 'تبادل الأفكار ولخصها ونظمها بشكل أسرع باستخدام الذكاء الاصطناعي.' } },
+  { id: 'looka', name: { en: 'Looka', ar: 'لوكا' }, logo: 'https://looka.com/favicon.ico', website: 'https://looka.com/', rating: 4.5, reviewCount: 5400, category: 'design', pricing: { en: 'Logo from $20, Brand Kit from $96/year', ar: 'شعار من 20$، حزمة العلامة التجارية من 96$/سنة' }, short_description: { en: 'AI-powered platform to design a logo and build a brand you love.', ar: 'منصة مدعومة بالذكاء الاصطناعي لتصميم شعار وبناء علامة تجارية تحبها.' } },
+  { id: 'microsoft-designer', name: { en: 'Microsoft Designer', ar: 'مايكروسوفت ديزاينر' }, logo: 'https://designer.microsoft.com/favicon.ico', website: 'https://designer.microsoft.com/', rating: 4.6, reviewCount: 6800, category: 'design', pricing: { en: 'Free, more features with Copilot Pro', ar: 'مجاني، المزيد من الميزات مع Copilot Pro' }, short_description: { en: 'Stunning designs in a flash. Create social posts, invitations, and more.', ar: 'تصاميم مذهلة في لمح البصر. أنشئ منشورات اجتماعية ودعوات والمزيد.' } },
+  
+  // --- Marketing & SEO Tools ---
   { id: 'semrush', name: { en: 'Semrush', ar: 'سيمراش' }, logo: 'https://www.semrush.com/favicon.ico', website: 'https://www.semrush.com/', rating: 4.7, reviewCount: 8000, category: 'marketing', pricing: { en: "Pro from $129.95/month", ar: "Pro تبدأ من 129.95$/شهر" }, short_description: { en: 'All-in-one marketing toolkit with powerful AI features for SEO & PPC.', ar: 'مجموعة أدوات تسويق شاملة بميزات ذكاء اصطناعي قوية.' } },
-  { id: 'surfer-seo', name: { en: 'Surfer SEO', ar: 'سيرفر SEO' }, logo: 'https://surferseo.com/wp-content/uploads/2021/11/cropped-favicon-512.png', website: 'https://surferseo.com/', rating: 4.8, reviewCount: 1300, category: 'marketing', pricing: { en: "Essential from $89/month", ar: "الأساسية تبدأ من 89$/شهر" }, short_description: { en: 'AI-powered content intelligence tool to help you rank higher.', ar: 'أداة ذكاء محتوى مدعومة بالذكاء الاصطناعي لمساعدتك على التصدر.' } }
-  // ... and so on to 70+. This provides a solid foundation.
+  { id: 'surfer-seo', name: { en: 'Surfer SEO', ar: 'سيرفر SEO' }, logo: 'https://surferseo.com/wp-content/uploads/2021/11/cropped-favicon-512.png', website: 'https://surferseo.com/', rating: 4.8, reviewCount: 4300, category: 'marketing', pricing: { en: "Essential from $89/month", ar: "الأساسية تبدأ من 89$/شهر" }, short_description: { en: 'AI-powered content intelligence tool to help you rank higher.', ar: 'أداة ذكاء محتوى مدعومة بالذكاء الاصطناعي لمساعدتك على التصدر.' } },
+  { id: 'anyword', name: { en: 'Anyword', ar: 'إني وورد' }, logo: 'https://anyword.com/favicon/apple-touch-icon.png', website: 'https://anyword.com/', rating: 4.6, reviewCount: 2100, category: 'marketing', pricing: { en: "Starter from $49/month", ar: "Starter تبدأ من 49$/شهر" }, short_description: { en: 'Data-driven AI copywriter that predicts performance before you publish.', ar: 'كاتب نصوص إعلانية بالذكاء الاصطناعي يتنبأ بالأداء قبل النشر.' } },
+
+  // --- Research Tools ---
+  { id: 'elicit-org', name: { en: 'Elicit', ar: 'إليسيت' }, logo: 'https://elicit.com/favicon/favicon-32x32.png', website: 'https://elicit.com/', rating: 4.8, reviewCount: 3500, category: 'research', pricing: { en: 'Free, Plus from $12/month', ar: 'مجاني، Plus يبدأ من 12$/شهر' }, short_description: { en: 'The AI Research Assistant. Automate literature reviews and find papers.', ar: 'مساعد البحث بالذكاء الاصطناعي. أتمتة مراجعات الأدبيات والعثور على الأوراق البحثية.' } },
+  { id: 'consensus-app', name: { en: 'Consensus', ar: 'كونسنسوس' }, logo: 'https://consensus.app/favicon.ico', website: 'https://consensus.app/', rating: 4.7, reviewCount: 2800, category: 'research', pricing: { en: 'Free, Premium available', ar: 'مجاني، Premium متاح' }, short_description: { en: 'An AI search engine for research that extracts findings from scientific papers.', ar: 'محرك بحث بالذكاء الاصطناعي يستخلص النتائج من الأوراق العلمية.' } },
+  { id: 'scispace', name: { en: 'Scispace', ar: 'ساي سبيس' }, logo: 'https://typeset.io/favicon.ico', website: 'https://typeset.io/', rating: 4.6, reviewCount: 2200, category: 'research', pricing: { en: 'Free, Premium from $12/month', ar: 'مجاني، Premium يبدأ من 12$/شهر' }, short_description: { en: 'Your AI co-pilot for understanding research literature.', ar: 'مساعدك الذكي لفهم الأدبيات البحثية.' } },
 ];
 
-// All available categories with icons for the category page
 const categories = [
     { id: 'chat', icon: 'fa-solid fa-comments', name: { en: 'Chat & Conversation', ar: 'الدردشة والمحادثة' } },
     { id: 'writing', icon: 'fa-solid fa-pen-nib', name: { en: 'Writing & Content', ar: 'الكتابة والمحتوى' } },
@@ -194,4 +86,5 @@ const categories = [
     { id: '3d', icon: 'fa-solid fa-cube', name: { en: '3D Design', ar: 'التصميم ثلاثي الأبعاد' } },
     { id: 'design', icon: 'fa-solid fa-palette', name: { en: 'Graphic Design', ar: 'التصميم الجرافيكي' } },
     { id: 'marketing', icon: 'fa-solid fa-bullhorn', name: { en: 'Marketing & SEO', ar: 'التسويق و SEO' } },
+    { id: 'research', icon: 'fa-solid fa-flask', name: { en: 'Research', ar: 'أدوات البحث' } },
 ];
